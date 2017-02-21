@@ -1,0 +1,1 @@
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\test\test\bin\Debug\test.exe.config
