@@ -3,69 +3,48 @@ using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
-using System.IO;
+using System.Configuration;
 
 namespace SimulatedDevice
 {
     class Program
     {
         static DeviceClient deviceClient;
-
-        // Constants
-        static class Constants
-        {
-            static string iotHubUri = "IoT HuB URI";
-            static string deviceKey = "DEVICE KEY";
-            public const int interval = 10; //Please set interval
-        }
+        static string deviceId = ConfigurationManager.AppSettings["deviceId"];
+        static string iotHubUri = ConfigurationManager.AppSettings["iotHubUri"];
+        static string deviceKey = ConfigurationManager.AppSettings["deviceKey"];
+        static int interval = int.Parse(ConfigurationManager.AppSettings["interval"]);
+        static int messageNumber = int.Parse(ConfigurationManager.AppSettings["messageNumber"]);
 
         static void Main(string[] args)
         {
             Console.WriteLine("Simulated device\n");
-            deviceClient = DeviceClient.Create(Constants.iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey("myFirstDevice", Constants.deviceKey), TransportType.Mqtt);
+            deviceClient = DeviceClient.Create(iotHubUri, new DeviceAuthenticationWithRegistrySymmetricKey(deviceId, deviceKey), TransportType.Mqtt);
             SendDeviceToCloudMessagesAsync();
-            //SendToBlobAsync();
             Console.ReadLine();
         }
 
-        // sending message to IoTHub
+        /// <summary>
+        ///  sending message to IoTHub to store Power BI 
+        /// </summary>
         private static async void SendDeviceToCloudMessagesAsync()
         {
 
-            while (true)
-            {
+            for (int i = 0; i < messageNumber; i++) {
+                // creating telemetry
                 var telemetryDataPoint = new
                 {
-                    deviceId = "myFirstDevice",
+                    deviceId = deviceId,
                     sendTime = DateTime.UtcNow,
-                    interval = Constants.interval
+                    interval = interval
                 };
+
                 var messageString = JsonConvert.SerializeObject(telemetryDataPoint);
                 var message = new Message(Encoding.ASCII.GetBytes(messageString));
-
                 await deviceClient.SendEventAsync(message);
                 Console.WriteLine("Sending message: {0}", messageString);
-
-                Task.Delay(Constants.interval).Wait();
+                Task.Delay(interval).Wait();
             }
-        }
-
-
-        // sending image to IoTHub to store Azure Storage
-        private static async void SendToBlobAsync()
-        {
-            string fileName = "image.jpg";
-            Console.WriteLine("Uploading file: {0}", fileName);
-            var watch = System.Diagnostics.Stopwatch.StartNew();
-
-            using (var sourceData = new FileStream(fileName, FileMode.Open))
-            {
-                await deviceClient.UploadToBlobAsync(fileName, sourceData);
-            }
-
-            watch.Stop();
-            Console.WriteLine("Time to upload file: {0}ms\n", watch.ElapsedMilliseconds);
         }
     }
-
 }

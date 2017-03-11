@@ -5,3 +5,11 @@ C:\hack\20170217IoTHackinCorp\GettingStartIotHub\ReadDeviceToCloudMessages\bin\D
 C:\hack\20170217IoTHackinCorp\GettingStartIotHub\ReadDeviceToCloudMessages\bin\Debug\Microsoft.ServiceBus.xml
 C:\hack\20170217IoTHackinCorp\GettingStartIotHub\ReadDeviceToCloudMessages\obj\Debug\ReadDeviceToCloudMessages.exe
 C:\hack\20170217IoTHackinCorp\GettingStartIotHub\ReadDeviceToCloudMessages\obj\Debug\ReadDeviceToCloudMessages.pdb
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\bin\Debug\ReadDeviceToCloudMessages.exe.config
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\bin\Debug\ReadDeviceToCloudMessages.exe
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\bin\Debug\ReadDeviceToCloudMessages.pdb
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\bin\Debug\Microsoft.ServiceBus.dll
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\bin\Debug\Microsoft.ServiceBus.xml
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\obj\Debug\ReadDeviceToCloudMessages.csprojResolveAssemblyReference.cache
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\obj\Debug\ReadDeviceToCloudMessages.exe
+C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\obj\Debug\ReadDeviceToCloudMessages.pdb

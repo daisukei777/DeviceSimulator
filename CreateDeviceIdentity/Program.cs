@@ -1,21 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Azure.Devices;
 using Microsoft.Azure.Devices.Common.Exceptions;
+using System.Configuration;
 
 namespace CreateDeviceIdentity
 {
     class Program
     {
-        static string iotHubUri = "IoT HuB URI";
-        static string deviceKey = "DEVICE KEY";
-
         static RegistryManager registryManager;
-        static string connectionString = "HostName=DskIoTHub2.azure-devices.net;SharedAccessKeyName=iothubowner;SharedAccessKey=nP8BsSM1Svr5bImHQH21/hesizYRpSOtOhp878Kb5ck=";
+        static string deviceId = ConfigurationManager.AppSettings["deviceId"];
+        static string connectionString = ConfigurationManager.AppSettings["connectionString"];
 
+        /// <summary>
+        /// Adding your simulated device to IoT Hubs.
+        /// </summary>
+        /// <param name="args"></param>
         static void Main(string[] args)
         {
             registryManager = RegistryManager.CreateFromConnectionString(connectionString);
@@ -23,9 +23,12 @@ namespace CreateDeviceIdentity
             Console.ReadLine();
         }
 
+        /// <summary>
+        ///  Add your simulated device to IoT Hub. If it already existed, It will return your device info.
+        /// </summary>
+        /// <returns></returns>
         private static async Task AddDeviceAsync()
         {
-            string deviceId = "myFirstDevice";
             Device device;
             try
             {
@@ -38,5 +41,4 @@ namespace CreateDeviceIdentity
             Console.WriteLine("Generated device key: {0}", device.Authentication.SymmetricKey.PrimaryKey);
         }
     }
-
 }
