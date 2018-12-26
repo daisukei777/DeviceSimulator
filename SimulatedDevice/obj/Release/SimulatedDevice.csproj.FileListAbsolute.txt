@@ -178,3 +178,4 @@ C:\Users\daisukei\Source\Repos\DeviceSimulator\SimulatedDevice\obj\Release\Simul
 C:\Users\daisukei\Source\Repos\DeviceSimulator\SimulatedDevice\obj\Release\SimulatedDevice.csproj.CopyComplete
 C:\Users\daisukei\Source\Repos\DeviceSimulator\SimulatedDevice\obj\Release\SimulatedDevice.exe
 C:\Users\daisukei\Source\Repos\DeviceSimulator\SimulatedDevice\obj\Release\SimulatedDevice.pdb
+C:\Users\daisukei\Source\Repos\DeviceSimulator\SimulatedDevice\obj\Release\SimulatedDevice.csprojAssemblyReference.cache

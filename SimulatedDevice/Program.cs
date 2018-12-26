@@ -5,6 +5,7 @@ using Microsoft.Azure.Devices.Client;
 using Newtonsoft.Json;
 using System.Configuration;
 
+
 namespace SimulatedDevice
 {
     class Program
@@ -30,13 +31,21 @@ namespace SimulatedDevice
         /// </summary>
         private static async void SendDeviceToCloudMessagesAsync()
         {
+            
+            string[] stlocations = new string[] { "Kanto", "Kansai", "Tohoku", "Tyugoku", "Kyusyu", "Hokkaido" };
 
             for (int i = 0; i < messageNumber; i++) {
+
+                Random cRandom = new System.Random();
+                int num = cRandom.Next(6);
+
+
                 // creating telemetry
                 var telemetryDataPoint = new
                 {
                     deviceId = deviceId,
                     sendTime = DateTime.UtcNow,
+                    location = stlocations[num],
                     interval = interval
                 };
 
