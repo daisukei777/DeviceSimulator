@@ -9,6 +9,7 @@ namespace SimulatedDevice
 {
     class Program
     {
+        // Input parameters for IoT Hub
         static DeviceClient deviceClient;
         static string deviceId = ConfigurationManager.AppSettings["deviceId"];
         static string iotHubUri = ConfigurationManager.AppSettings["iotHubUri"];

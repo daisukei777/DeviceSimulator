@@ -6,3 +6,12 @@ C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\bin\Rele
 C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.csprojResolveAssemblyReference.cache
 C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.exe
 C:\hack\20170217IoTHackinCorp\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.pdb
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\bin\Release\ReadDeviceToCloudMessages.exe.config
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\bin\Release\ReadDeviceToCloudMessages.exe
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\bin\Release\ReadDeviceToCloudMessages.pdb
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\bin\Release\Microsoft.ServiceBus.dll
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\bin\Release\Microsoft.ServiceBus.xml
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.csproj.CoreCompileInputs.cache
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.csproj.CopyComplete
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.exe
+C:\Users\daisukei\Source\Repos\DeviceSimulator\ReadDeviceToCloudMessages\obj\Release\ReadDeviceToCloudMessages.pdb
